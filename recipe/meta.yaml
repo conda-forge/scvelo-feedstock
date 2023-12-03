@@ -1,5 +1,5 @@
 {% set name = "scvelo" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scvelo-{{ version }}.tar.gz
-  sha256: 6955403701564289b12f7549d4a655b1e503f4fba1be1162618e2ebc4567a6f0
+  sha256: 3a41a73b29e091268c40f08dc57a63eab5dfc2bd8a57e564cf1a6aca5e4d5d22
 
 build:
   number: 0
