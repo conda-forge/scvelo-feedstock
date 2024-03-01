@@ -10,7 +10,7 @@ source:
   sha256: 3a41a73b29e091268c40f08dc57a63eab5dfc2bd8a57e564cf1a6aca5e4d5d22
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -32,7 +32,6 @@ requirements:
     - scikit-learn >=0.21.2,<1.2.0
     - scvi-tools >=0.20.1
     - matplotlib-base >=3.3.0
-    - chex <=0.1.8
 
 test:
   imports:
