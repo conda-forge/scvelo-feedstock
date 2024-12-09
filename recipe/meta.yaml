@@ -1,27 +1,28 @@
 {% set name = "scvelo" %}
 {% set version = "0.3.3" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scvelo-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scvelo-{{ version }}.tar.gz
   sha256: 9383a8712f81f0f2d2f1bddcfc81889ede06a0027de537b5b9af83ed821390c7
 
 build:
   number: 0
-  noarch: python
+  noarch: python {{ python_min }}
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - anndata >=0.7.5
     - scanpy >=1.5
     - loompy >=2.0.12
